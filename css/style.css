@@ -1,11 +1,11 @@
 /*CSS document*/
 body{
-	background-color:#e51d1d;
-	font-family: 'Open Sans', sans-serif;
+    background-color:#e51d1d;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
-	
+    
 div#container {
     width: 1170px;
     display: block;
@@ -422,9 +422,58 @@ img.img_one {
     padding-top: 2em;
 }
 
-/*div.content_button>ul>li:active {
-    background-color: #e51d1d;
-}*/
+    /*định dạng hover overlay images*/
+    .img_block {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+
+    img.img_one {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+    .overlay {
+    position: absolute;
+    bottom: 15px;
+    width: 83%;
+    height: 48%;
+    padding-top: 40%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.46);
+    zoom: 1;
+}
+
+    .img_block:hover>overlay {
+    opacity: 1;
+}
+
+    .img_block:hover>img.img_one {
+    opacity: 0.3;
+}
+
+    i.fa.fa-eye {
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    border-radius: 3px;
+    padding: 5px;
+    float: left;
+    margin-left: 30%;
+}
+
+    i.fa.fa-link {
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    border-radius: 3px;
+    padding: 5px;
+    float: left;
+    margin-left: 10%;
+}
 
 /*định dạng phần footer*/
 .title_work {
@@ -437,6 +486,12 @@ img.img_one {
     display: block;
     width: 66%;
     float: left;
+}
+
+.content_button {
+    width: 100%;
+    display: block;
+    margin-left: -2.5em;
 }
 
 div.content_button>ul>li {
@@ -519,7 +574,7 @@ div.contact_button>button:hover>i {
 }
 
 i.fa.fa-envelope {
-	color: #060000;
+    color: #060000;
 }
 
 div.contact_button>button>a {
@@ -627,7 +682,6 @@ p.name_bottom {
 }
 
 div.social_icon>ul>li>a>i {font-size: 2em;}
-}
 
 .phone_contact {
     font-size: 1em;
