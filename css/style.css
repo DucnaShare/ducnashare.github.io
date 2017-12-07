@@ -380,6 +380,11 @@ div.content_button>ul>li {
     display: inline-block;
 }
 
+div.content_button>ul {
+    margin: 0;
+    padding: 0;
+}
+
 div.content_button>ul>li:hover {
     background-color: #000;
     color:#fff;
@@ -436,10 +441,10 @@ img.img_one {
     img.img_one {
     opacity: 1;
     display: block;
-    height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
 }
+
     .overlay {
     position: absolute;
     bottom: 15px;
@@ -505,7 +510,6 @@ img.img_one {
 .content_button {
     width: 100%;
     display: block;
-    margin-left: -2.5em;
 }
 
 div.content_button>ul>li {
