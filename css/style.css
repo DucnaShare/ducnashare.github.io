@@ -106,6 +106,8 @@ div.social_icon>ul>li>a {
     margin-right:5px;
 }
 
+.social_icon>ul>li>a>i {font-size: 2em;}
+
 div.social_icon>ul>li>a:hover>i {
     color: #000000;
 }
@@ -474,6 +476,11 @@ img.img_one {
     margin-left: 30%;
 }
 
+    i.fa.fa-eye:hover {
+    background: #000;
+    color: #fff;
+}
+
     i.fa.fa-link {
     background: #fff;
     text-decoration: none;
@@ -483,6 +490,12 @@ img.img_one {
     float: left;
     margin-left: 10%;
 }
+
+    i.fa.fa-link:hover {
+    background: #000;
+    color: #fff;
+}
+
     i.fa.fa-caret-right {
     background: #fff;
     text-decoration: none;
@@ -492,6 +505,11 @@ img.img_one {
     margin-left: 30%;
     margin-: 10px;
     padding: 5px 10px 5px 10px;
+}
+
+    i.fa.fa-caret-right:hover {
+    background: #000;
+    color: #fff;
 }
 
 /*định dạng phần footer*/
