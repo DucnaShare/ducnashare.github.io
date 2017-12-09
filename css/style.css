@@ -420,14 +420,6 @@ div.content_button>ul>li:hover {
     width: 50%;
 }
 
-img.img_one {
-    width: 10em;
-    height: 10em;
-    float: left;
-    margin-bottom: 1em;
-    padding-right: 1.2em;
-}
-
 .content_example {
     clear: both;
     padding-top: 2em;
@@ -435,37 +427,46 @@ img.img_one {
 
     /*định dạng hover overlay images*/
     .img_block {
-    position: relative;
-    width: 25%;
+    width: 10em;
+    height: 10em;
     float: left;
+    margin-right: 1em;
+    padding-bottom: 1em;
+    position:relative;
 }
 
-    img.img_one {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    .img_block .img_one {
+    width: 100%;
+    height: 100%;
 }
 
     .overlay {
-    position: absolute;
-    bottom: 15px;
-    width: 83%;
-    height: 48%;
-    padding-top: 40%;
+    width: 10em;
+    height: 10em;
+    background: #000;
+    opacity:1;
+    position:absolute;
+    visibility: hidden;
+}
+
+    .img_block:hover .overlay {
+    visibility: visible;
+    transition: 1s ease;
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(-10.3em);
+}
+
+    .text {
     text-align: center;
-    background: rgba(0, 0, 0, 0.46);
-    zoom: 1;
+    margin-top: 4em;
+    margin-left: 3em;
+    display: none;
 }
 
-    .img_block:hover>overlay {
-    opacity: 1;
+    .img_block:hover .text {
+    display: block;
 }
-
-    .img_block:hover>img.img_one {
-    opacity: 0.3;
-}
-
+    
     i.fa.fa-eye {
     background: #fff;
     text-decoration: none;
@@ -473,7 +474,6 @@ img.img_one {
     border-radius: 3px;
     padding: 5px;
     float: left;
-    margin-left: 30%;
 }
 
     i.fa.fa-eye:hover {
@@ -502,8 +502,6 @@ img.img_one {
     color: #000;
     border-radius: 3px;
     float: left;
-    margin-left: 30%;
-    margin-: 10px;
     padding: 5px 10px 5px 10px;
 }
 
@@ -591,7 +589,7 @@ input.ct_btn.last {
 div.contact_button>button {
     width: 10em;
     height: 3em;
-    background-color: #e51d1d;
+    background-color:#e51d1d;
     border-radius: 0.3em;
     border: 1px solid #e51d1d;
     color: #060000;
@@ -599,6 +597,7 @@ div.contact_button>button {
 
 div.contact_button>button:hover {
     background-color: #000;
+    border: 1px solid #000;
     color: #fff;
 }
 
@@ -647,6 +646,7 @@ div.contact_copy>button>a {
 
 div.contact_copy>button:hover {
     background-color: #000;
+    border: 1px solid #000;
     color: #fff;
 }
 
@@ -657,7 +657,9 @@ div.contact_copy>button:hover>a {
 
 /*định dạng giao diện responsive trên table 640 px*/
 @media only screen and (max-width: 640px) {
-
+/*div#container {
+    width:640px;
+}*/
 
 
 }
