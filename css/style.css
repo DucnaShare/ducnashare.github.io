@@ -226,6 +226,8 @@ div.skillbar>p {
 .skill_container {
     width: 90%;
     background-color: #ddd;
+    border-radius: 1em;
+    height: 1em;
 }
 
 .skills {
@@ -233,7 +235,11 @@ div.skillbar>p {
     padding-right: 20px;
     line-height: 40px;
     color: white;
+    border-radius: 1em;
+    height: 1em;
+    position:relative;
 }
+    
 
 .html {
     width: 70%;
@@ -253,6 +259,18 @@ div.skillbar>p {
 .design {
     width: 10%;
     background-color: #808080;
+}
+
+.skillbar .skill p {
+    text-transform: uppercase;
+}
+    
+.skills span {
+    position: absolute;
+    left: 1em;
+    top: -1em;
+    font-size: 0.7em;
+    line-height: 3.5em;
 }
 
 
@@ -759,7 +777,7 @@ div.content_personal>p {
 }
 
 .technical_skills {
-    height: 40em;
+    height: 43em;
     padding-top: 1em;
 }
 
