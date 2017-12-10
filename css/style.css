@@ -431,8 +431,9 @@ div.content_button>ul>li:hover {
     height: 10em;
     float: left;
     margin-right: 1em;
-    padding-bottom: 1em;
+    margin-bottom: 1em;
     position:relative;
+    overflow: hidden;
 }
 
     .img_block .img_one {
@@ -826,7 +827,7 @@ div.content_technical>p {
 
 .work_example {
     padding-top: 1em;
-    height: 75em;
+    height: 72em;
 }
 
 .title_work {
@@ -851,23 +852,33 @@ div.content_technical>p {
     padding-top: 2em;
 }
 
-.img_block.row1 {
-    width: 33%;
-    padding-left: 1.5em;
+    /*định dạng css cho grid ảnh*/
+    .img_block {
+    margin-right: 0em;
 }
 
-.img_block.row2 {
-    width: 33%;
+    .img_row1 {
     margin-left: 1.5em;
 }
 
+    .img_block {
+    width: 43%;
+}
+
     .overlay {
-    position: absolute;
-    width: 100%;
-    height: 60%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.46);
-    zoom: 1;
+    height: 100%;
+}
+    
+    .img_row2 {
+    margin-left: 1.5em;
+}
+
+    .img_row3 {
+    margin-left: 1.5em;
+}
+    
+        .img_block {
+    margin-bottom: 0em;
 }
 
 .contact {
