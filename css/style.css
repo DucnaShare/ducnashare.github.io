@@ -15,7 +15,7 @@ div#container {
     margin-bottom: 3em;
 }
 
-/*định dạng header*/
+/*Ä‘á»‹nh dáº¡ng header*/
 div#header {
     width: 100%;
     height: 16em;
@@ -145,7 +145,7 @@ div.phone_contact>ul>li {
     list-style: none;
 }
 
-/*định dạng content*/
+/*Ä‘á»‹nh dáº¡ng content*/
 p.em {
     margin-left: 2.5em;
 }
@@ -165,7 +165,7 @@ div#content {
     display: block;
     background-color: #ffffff;
 }
-/*định dạng phần personal profile*/
+/*Ä‘á»‹nh dáº¡ng pháº§n personal profile*/
 .personal_profile {
     height: 15em;
     display: block;
@@ -189,7 +189,7 @@ div.content_personal>p {
     margin-top: 0em;
 }
 
-/*định dạng phần technical skills*/
+/*Ä‘á»‹nh dáº¡ng pháº§n technical skills*/
 .technical_skills {
     display: block;
     height: 20em;
@@ -231,7 +231,7 @@ div.skillbar>p {
     display: block;
 }
 
-/*định dạng phần skillbar*/
+/*Ä‘á»‹nh dáº¡ng pháº§n skillbar*/
 .skill {
     width: 50%;
     display: block;
@@ -299,7 +299,7 @@ div.skillbar>p {
 }
 
 
-/*định dạng phần work experience*/
+/*Ä‘á»‹nh dáº¡ng pháº§n work experience*/
 .work_experience {
     display: block;
     height: 30em;
@@ -367,7 +367,7 @@ span {
     float: left;
 }
 
-/*định dạng phần education*/
+/*Ä‘á»‹nh dáº¡ng pháº§n education*/
 .education {
     display: block;
     height: 25em;
@@ -397,7 +397,7 @@ h3.text-top {
 }
 
 
-/*định dạng phần work example*/
+/*Ä‘á»‹nh dáº¡ng pháº§n work example*/
 .work_example {
     display: block;
     height: 40em;
@@ -473,7 +473,7 @@ div.content_button>ul>li:hover {
     padding-top: 2em;
 }
 
-    /*định dạng hover overlay images*/
+    /*Ä‘á»‹nh dáº¡ng hover overlay images*/
     .img_block {
     width: 10em;
     height: 10em;
@@ -559,7 +559,7 @@ div.content_button>ul>li:hover {
     color: #fff;
 }
 
-/*định dạng phần footer*/
+/*Ä‘á»‹nh dáº¡ng pháº§n footer*/
 .title_work {
     display: block;
     width: 33%;
@@ -705,7 +705,7 @@ div.contact_copy>button:hover>a {
 }
 
 
-/*định dạng giao diện responsive trên table 640 px*/
+/*Ä‘á»‹nh dáº¡ng giao diá»‡n responsive trÃªn table 640 px*/
 @media only screen and (max-width: 640px) {
 /*div#container {
     width:640px;
@@ -714,16 +714,20 @@ div.contact_copy>button:hover>a {
 
 }
 
-/*định dạng giao diện responsive trên phone 360px*/
+/*Ä‘á»‹nh dáº¡ng giao diá»‡n responsive trÃªn phone 360px*/
  @media only screen and (max-width:360px)  {
 div#container {
     width:96%;
     margin-top:1em;
     margin-bottom:1em;
 }
-/*định dạng header*/
+/*Ä‘á»‹nh dáº¡ng header*/
 div#header {
-    height: 40em;
+    height: 39em;
+}
+
+div#content {
+    margin-top:1em;
 }
 
 .name {
@@ -907,7 +911,7 @@ h3.text-top {
     padding-top: 2em;
 }
 
-    /*định dạng css cho grid ảnh*/
+    /*Ä‘á»‹nh dáº¡ng css cho grid áº£nh*/
     .img_block {
     margin-right: 0em;
 }
