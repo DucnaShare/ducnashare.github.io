@@ -1,386 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>MY CV/RESUME</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <!-- link đặt favicon -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            resize: vertical;
+        }
 
-    <!-- link đặt thư viện css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="lib/font-awesome.css">
-    
-    <!-- link đặt fonts sử dụng -->
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300,400,800" rel="stylesheet">
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-	<!-- link cài đặt google analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110930781-1"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
 
-  		gtag('config', 'UA-110930781-1');
-	</script>
+        .freebirdFormviewerViewHeaderTitle exportFormTitle {
+            color: #e8665f;
+        }
+
+        #mG61Hd {
+            max-width: 650px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        #mG61Hd .exportFormTitle {
+            color: #e8665f;
+            font-weight: 600;
+            font-size: 23px;
+        }
+
+        .exportTextarea {
+            width: 100%;
+        }
+
+        .quantumWizButtonEl {
+            background-color: #45a049;
+            color: white;
+            padding: .5rem 2rem;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .quantumWizTextinputPaperinputPlaceholder,
+        .quantumWizTextinputPapertextareaPlaceholder {
+            display: none;
+        }
+
+        .quantumWizTextinputPaperinputPlaceholder {
+           
+            top: 50% !important;
+            margin-top: -7px;
+            left: 5px !important;
+        }
+
+        .freebirdFormviewerViewItemList {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .freebirdFormviewerViewNumberedItemContainer {
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+
+        .freebirdFormviewerViewItemsItemItemTitleDescContainer {
+            display: inline-block;
+        }
+
+        .freebirdThemedSelectDarkerDisabled {
+            display: none;
+        }
+
+        .custom_form {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            max-width: 90%;
+            width: 100%;
+            background-color: white;
+            position: relative;
+            top: 24px;
+            padding: .7rem .5rem .6rem;
+            margin-left: 7px;
+        }
+
+        .freebirdFormviewerViewItemsTextItemWrapper {
+            padding: 0 7px;
+        }
+
+        .custom_area {
+            flex-basis: 99%;
+            max-width: 99%;
+        }
+
+        .custom_area .freebirdFormviewerViewItemsTextTextItem {
+            padding: 0 7px;
+        }
+
+        .custom_label {
+            position: relative;
+            top: 35px;
+            left: 17px;
+            display: inline;
+        }
+
+        .label-custom {
+            position: relative;
+            top: 35px;
+            left: 8px;
+            display: inline;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .freebirdFormviewerViewNavigationPasswordWarning {
+            margin-top: 30px;
+        }
+
+        .freebirdFormviewerViewNavigationNavControls {
+            text-align: center;
+        }
+
+        .freebirdFormviewerViewItemsTextTextItem .freebirdFormviewerViewItemsTextShortText:not(.freebirdFormviewerViewItemsTextDisabledText) {
+            width: 100% !important;
+        }
+
+        .quantumWizButtonPaperbuttonFocusOverlay {
+            background: #0a800a !important;
+        }
+
+        .quantumWizMenuPaperselectEl {
+            width: 100%;
+        }
+
+        .quantumWizMenuPaperselectEl {
+            border-radius: 4px;
+            border: 1px solid #ccc !important;
+            margin-top: 1.7rem;
+        }
+
+        .quantumWizTextinputPapertextareaEl {
+            padding-bottom: 0 !important;
+            margin-top: 1.7rem;
+            border: 1px solid #ccc !important;
+            border-radius: 4px;
+
+        }
+
+        .quantumWizTextinputPaperinputUnderline {
+            background: none !important;
+        }
+
+        .quantumWizTextinputPapertextareaContentArea {
+            padding: 8px !important;
+        }
+
+        .quantumWizMenuPaperselectDropDown {
+            /*
+            border-width: 10px 10px 0 10px !important;
+            top: 16px !important;
+*/
+            background: #ccc !important;
+            width: 43px !important;
+            height: 100% !important;
+            top: 0 !important;
+            right: -1px !important;
+            position: absolute;
+            border-color: none !important;
+            border-style: none !important;
+            border-width: none !important;
+        }
+
+        .quantumWizMenuPaperselectDropDown:after {
+            content: '';
+            border-color: white transparent;
+            border-style: solid;
+            border-width: 7px 7px 0 7px;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+
+        }
+		.quantumWizMenuPaperselectEl {
+            width: 96% !important;
+        }
+
+        .freebirdFormviewerViewItemsTextTextItem .freebirdFormviewerViewItemsTextLongText {
+            width: 95% !important;
+        }
+		.freebirdFormviewerViewFormContent>div {
+            padding: 0 17px !important;
+        }
+
+        .freebirdFormviewerViewHeaderHeader>div {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        @media (max-width: 576px) {
+            .freebirdFormviewerViewItemList {
+                flex-direction: column;
+            }
+
+            .freebirdFormviewerViewNumberedItemContainer {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+
+            .custom_form {
+                max-width: 93%;
+                position: relative;
+                top: 3px;
+                margin-top: 20px;
+            }
+
+            input[type=text] {
+                margin-bottom: 0;
+            }
+        }
+        .freebirdFormviewerViewFooterEmbeddedBackground,
+        .freebirdFormviewerViewNavigationPasswordWarning,
+        .freebirdSolidBackground{
+            display: none !important; 
+        }
+        .freebirdFormviewerViewNavigationButtons {
+            padding-bottom: 10px;
+            margin: 0 auto;
+        }
+        .freebirdFormviewerViewEmbedded .freebirdFormviewerViewFormCard {
+            background-color: #fff;
+            box-shadow: none !important;
+            word-wrap: break-word;
+        }
+    </style>
 
 </head>
+
 <body>
-<div id="container">
-	<div id="header">
-		<div class="name">
-			<p class="name_top">DUCNA</p>
-			<p class="name_center">BlackEye</p>
-			<p class="name_bottom">FrontEnd Developer</p>
-		</div>
-		<div class="intro">
-			<img src="images/2330.jpg" class="myimg" alt="ảnh của tôi">
-			<p class="intro_text">Tôi là một lập trình viên giao diện web frontend. Ngoài ra tôi cũng đang học hỏi thêm về lĩnh vực thiết kế giao diện web. Tôi đam mê lập trình và việc tạo ra các giao diện web đẹp và hiện đại. Tôi luôn tìm tòi, tự học và đổi mới không ngừng. Tôi của hôm nay chắc chắn sẽ làm tốt hơn hôm qua. </p>
-		</div>
-		<div class="intro_contact">
-			<div class="social_icon">
-				<ul>
-					<li><a href="https://www.facebook.com/ngoduc83" title="My Facebook" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/ng%C3%B4-%C4%91%E1%BB%A9c-88935412b/" title="My LinkeIn" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com/gianghongha/" title="My Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href="https://twitter.com/tucuongbattuc" title="My Twitter" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.youtube.com/channel/UCvehOHsuhZabwVuHM96YWNg?view_as=subscriber" title="My Youtube" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://plus.google.com/u/1/117886714721130241529" title="My Google+" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.pinterest.com/cuongbattuc/" title="My Pinterest" target="_blank"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.tumblr.com/blog/sharetobetter" title="My Tumblr" target="_blank"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-			<div class="phone_contact">
-				<ul>
-					<li class="fullname">Fullname: Ngô Anh Đức</li>
-					<li><i class="fa fa-birthday-cake" aria-hidden="true"></i>Birthday: 1983</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="#">Mail: ducna.tuy.tam.so.duc@gmail.com</a></li>
-					<li><i class="fa fa-desktop" aria-hidden="true"></i><a href="http://sharetobetter.org/" target="_blank">My Website: http://sharetobetter.org/</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>Phone: (+84)9872xxx</li>
-					<li><i class="fa fa-map-marker" aria-hidden="true"></i>Adress: Long Bien, Ha Noi, Viet Nam</li>
-				</ul>
-			</div>
-		</div>
+    <script src="http://googleformrestyler.apixml.net/GoogleFormStyler.js"
+        form="https://docs.google.com/forms/d/e/1FAIpQLSdUpKejcH_wpWzsovcCfV_zypDDVNWC5AeDLhjympxwTpoPZA/viewform?embedded=true&fbclid=IwAR0iSayi2HEYCDBFYR6MVwCjlQB9U45jP4TxlBP8x2ko4pGO0l7V14NcZ0E">
+    </script>
 
-	</div>
-	<div id="content">
-		<div class="personal_profile">
-			<div class="title_personal">
-				<p class="em top">Personal Profile</p>
-				<p class="em hidden">A few words about me</p>
-			</div>
-			<div class="content_personal">
-				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-
-				<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas	humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-			</div>
-			
-		</div>
-		<div class="technical_skills">
-			<div class="title_technical">
-				<p class="em top">Technical Skills</p>
-				<p class="em hidden">This is what I am good at</p>
-			</div>
-			<div class="content_technical">
-				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-				<div class="skillbar">
-					<div class="skill">
-						<p>HTML</p>
-						<div class="skill_container">
-  							<div class="skills html"><span>70%</span></div>
-						</div>
-					</div>
-					
-					<div class="skill">
-						<p>CSS</p>
-						<div class="skill_container">
-  							<div class="skills css"><span>70%</span></div>
-						</div>
-					</div>
-					
-					<div class="skill">
-						<p>JavaScript</p>
-						<div class="skill_container">
-  							<div class="skills js"><span>50%</span></div>
-						</div>
-					</div>
-
-					<div class="skill">
-						<p>Bootstrap</p>
-						<div class="skill_container">
-  							<div class="skills bs"><span>45%</span></div>
-						</div>
-					</div>
-
-					<div class="skill">
-						<p>Jquery</p>
-						<div class="skill_container">
-  							<div class="skills jq"><span>45%</span></div>
-						</div>
-					</div>
-
-					<div class="skill">
-						<p>Design</p>
-						<div class="skill_container">
-  							<div class="skills design"><span>15%</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="work_experience">
-			<div class="title_experience">
-				<p class="em top">Work Experience</p>
-				<p class="em hidden">Current and previous employers</p>
-			</div>
-			<div class="content_experience">
-				<div class="content1_exp">
-					<div class="content1_left">
-						<h3>Senior Front End Developer</h3>
-						<p>Fictive Web Agency</p>
-						<p><span>Period:</span> January 2008 - Present day</p>
-						<p><span>Job type:</span> Full-Time</p>
-						<p><span>References:</span> Michael Smith</p>
-					</div>
-					<div class="content1_right">
-						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-						<ul>
-							<li>Placerat facer possim assum;</li>
-							<li>Typi non habent claritatem insitam;</li>
-							<li>Est usus legentis in iis qui facit eorum;</li>
-							<li>Investigationes demonstraverunt lectores;</li>
-							<li>Legere me lius quod ii legunt saepius.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="content2_exp">
-					<div class="content2_left">
-						<h3>Senior Front End Developer</h3>
-						<p>Fictive Web Agency</p>
-						<p><span>Period:</span> January 2008 - Present day</p>
-						<p><span>Job type:</span> Full-Time</p>
-						<p><span>References:</span> NA</p>
-					</div>
-					<div class="content2_right">
-						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-						<ul>
-							<li>Placerat facer possim assum;</li>
-							<li>Typi non habent claritatem insitam;</li>
-							<li>Est usus legentis in iis qui facit eorum;</li>
-							<li>Investigationes demonstraverunt lectores;</li>
-							<li>Legere me lius quod ii legunt saepius.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="education">
-			<div class="title_education">
-				<p class="em top">Education</p>
-				<p class="em hidden">An overview of my educational background</p>
-			</div>
-			<div class="content_education">
-				<div class="edu_top">
-					<h3 class="text-top">Funix University</h3>
-					<p>Bachelor of Arts degree in Conceptual Design.</p>
-					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-				</div>
-				<div class="edu_bottom">
-					<h3>San Francisco School of the Arts</h3>
-					<p>Class of 1994</p>
-					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-				</div>
-			</div>
-		</div>
-		<div class="work_example">
-			<div class="title_work">
-				<p class="em top">Work Samples</p>
-				<p class="em hidden">A showcase of my projects</p>
-			</div>
-			<div class="content_work">
-				<div class="content_button">
-					<ul>
-						<li>SHOW ALL</li>
-						<li>BOOK</li>
-						<li>CARD</li>
-						<li>LEAFTLET</li>
-						<li>VIDEO</li>
-						<li>CARD & VIDEO</li>
-					</ul>
-				</div>
-				<div class="content_example">
-					<div class="img_row1">
-
-
-
-							<div class="img_block row1">
-							<img src="images/img.jpg" alt="ảnh sản phẩm" class="img_one">
-								<div class="overlay">
-									<a href="images/img.jpg">
-										<div class="text">
-											<i class="fa fa-eye" aria-hidden="true"></i>
-										</div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-
-
-
-
-							<div class="img_block row1">
-							<img src="images/img.jpg" alt="ảnh sản phẩm" class="img_one">
-								<div class="overlay">
-									<a href="images/img-books.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-  							<div class="img_block row2">
-							<img src="images/img.jpg" alt="ảnh sản phẩm" class="img_one">
-								<div class="overlay">
-									<a href="images/img.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row2">
-							<img src="images/img-video.jpg" alt="ảnh video" class="img_one">
-								<div class="overlay">
-									<a href="https://www.youtube.com/watch?v=IpBubB_WboU">
-    								<div class="text"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-					</div>
-					<div class="img_row2">
-							<div class="img_block row1">
-							<img src="images/img.jpg" alt="" class="img_one">
-								<div class="overlay">
-									<a href="images/img-books.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row1">
-							<img src="images/img-video.jpg" alt="ảnh video" class="img_one">
-								<div class="overlay">
-									<a href="https://www.youtube.com/watch?v=IpBubB_WboU">
-    								<div class="text"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row2">
-							<img src="images/img.jpg" alt="ảnh sản phẩm" class="img_one">
-								<div class="overlay">
-									<a href="images/img.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row2">
-							<img src="images/img.jpg" alt="ảnh sản phẩm" class="img_one">
-								<div class="overlay">
-									<a href="images/img-books.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-					</div>
-					<div class="img_row3">
-							<div class="img_block row1">
-							<img src="images/img.jpg" alt="" class="img_one">
-								<div class="overlay">
-									<a href="images/img.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row1">
-							<img src="images/img.jpg" alt="" class="img_one">
-								<div class="overlay">
-									<a href="images/img-books.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-  							<div class="img_block row2">
-							<img src="images/img.jpg" alt="" class="img_one">
-								<div class="overlay">
-									<a href="images/img.jpg">
-										<div class="text"><i class="fa fa-eye" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-							<div class="img_block row2">
-							<img src="images/img-video.jpg" alt="" class="img_one">
-								<div class="overlay">
-									<a href="https://www.youtube.com/watch?v=IpBubB_WboU">
-    								<div class="text"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
-									</a>
-    								<a href="#">
-    									<div class="text"><i class="fa fa-link" aria-hidden="true"></i></div>
-    								</a>
-  								</div>
-  							</div>
-					</div>
-				</div>
-			</div>
-		</div>
-			<div class="contact">
-		<div class="contact_me">
-			<p class="em top">Contact Me</p>
-			<p class="em hidden">Let's get in touch</p>
-		</div>
-		<div class="contact_button">
-			<input type="text" placeholder="Your name..." class="ct_btn one">
-			<input type="text" placeholder="Your email..." class="ct_btn">
-			<input type="text" placeholder="Your message..." class="ct_btn last">
-			<button><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">Contact me</a></button>
-		</div>
-		<div class="contact_copy">
-			<h2>Want a copy of my resume?</h2>
-			<p>You can grab a printable copy of my resume by clicking the link below:</p>
-			<button><i class="fa fa-cloud-download" aria-hidden="true"></i><a href="download/kynanghocdh_FPT.pdf">Get my resume</a></button>
-		</div>
-	</div>
-	</div>
-</div>
-<!-- đặt link css -->
-<script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
